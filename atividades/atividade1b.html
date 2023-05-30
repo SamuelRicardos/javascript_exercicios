@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1b</title>
+    <link rel="stylesheet" href="css/atividade1b.css">
+   
+</head>
+<body>
+
+    <form id="form">
+
+        <label for="campo" id="label1">Nome:</label><br>
+        <input type="text" name="name" id="campo" placeholder="Digite o seu nome"><br><br>
+        <label for="nota1" id="label2">Insira a sua primeira nota:</label><br>
+        <input type="number" name="nota1" id="nota1"  step="0.1" min="0.00" max="10.00" required><br><br>
+        <label for="nota2" id="label3">Insira a sua segunda nota:</label><br>
+        <input type="number" name="nota2" id="nota2"  step="0.1" min="0.00" max="10.00" required> <br><br>
+        <input type="submit" value="Enviar" id="send">
+        <input type="reset" value="Limpar">
+        <br>
+        <br>
+        <span id="aprovado"></span><br>
+        <span id="reprovado"></span>
+    </form>
+
+    <script>
+        const form = document.querySelector("#form")
+        const name = document.querySelector("#campo")
+        const nota1 = document.querySelector("#nota1")
+        const nota2 = document.querySelector("#nota2")
+
+        form.addEventListener("submit", function(event){
+            event.preventDefault()
+            const input = campo.value
+            console.log(input)
+            const not_1 = parseFloat(nota1.value)
+            console.log(not_1)
+            const not_2 = parseFloat(nota2.value)
+            console.log(not_2)
+            var media = (not_1 + not_2)/2
+            if(media>=6){
+                let x = document.getElementById("aprovado")
+                x.innerHTML = input + ", a sua média é: " + media + ". Você foi APROVADO"
+
+            } else {
+                let y = document.getElementById("reprovado")
+                y.innerHTML = input + ", a sua média é: " + media +  ". Você foi REPROVADO."
+            }
+            
+
+        })
+    
+    </script>
+   
+    
+</body>
+</html>

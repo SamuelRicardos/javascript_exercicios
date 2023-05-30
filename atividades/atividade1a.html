@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1a</title>
+</head>
+
+<body>
+
+    <style>
+       #situação1 {
+        color: blue;
+        
+       } 
+
+       #situação2 {
+        color: red;
+        
+       }
+
+    </style>
+    <span id="situação1"></span><br>
+    <span id="situação2"></span><br>
+    <span id="media1">Media1</span>
+
+    <script>
+        let nome  = prompt("Insira o seu nome:");
+        let nota1 = parseFloat(prompt("Insira a sua primeira nota:"));
+        let nota2 = parseFloat(prompt("Insira a sua segunda nota:"));
+        
+        var media = (nota1 + nota2)/2
+
+        if(media>=6){
+            
+            alert("Parabéns, você foi aprovado!")
+            let x = document.getElementById("situação1");
+        x.innerHTML = "Parabéns," + nome + ",você foi aprovado"
+        } else {
+            alert("Você foi reprovado, se esforçe mais na próxima.")
+            let y = document.getElementById("situação2");
+        y.innerHTML = "Infelizmente," + nome + ",você foi reprovado"
+            
+        }
+        
+        let z = document.getElementById("media1")
+        z.innerHTML = "A sua média é: " + media
+
+    </script>
+
+</body>
+
+</html>
