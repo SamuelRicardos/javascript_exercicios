@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+    <h1>Criando a própria lista</h1>
+    <h2>Exemplo:</h2>
+<div id="division">    
+<ul id="Lista">
+    <li>cuscuz</li>
+    <li>pão</li>
+</ul>
+<h3>Selecione as cores e clique no botão para adicionar.</h3>
+<input type="text" id="texto"><br><br>
+
+<input type="radio" name="cores" value="white"><a>Padrão</a>
+<input type="radio" name="cores" value="red"><a>Vermelho</a>
+<input type="radio" name="cores" value="green"><a>Verde</a>
+<input type="radio" name="cores" value="yellow"><a>Amarelo</a><br><br>
+<button id="botao">Adicionar</button>
+</div>
+
+<script>
+document.getElementById("botao").addEventListener("click", function(){
+const texto = document.getElementById("texto").value;
+const selectedColor = document.querySelector('input[name="cores"]:checked').value;
+const node = document.createElement("li");
+
+node.style.color = selectedColor;
+const textnode = document.createTextNode(texto);
+node.appendChild(textnode);
+document.getElementById("Lista").appendChild(node);
+});
+</script>
+<style>
+body{
+background-color:#1f242d ;
+color: white;
+}
+#division{
+    color: white;
+}
+</style>
+</body>
+</html>
