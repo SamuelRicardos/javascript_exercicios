@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kayan</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+
+    <script type="text/javascript">
+        function calcular(){
+    		
+    		var formulario = document.getElementById("formulario");	
+    		
+    			
+    		var Peso 	= +formulario.Peso.value
+    		var Altura	= +formulario.Altura.value
+    	
+    		 
+    		
+    		var imc = Peso / (Altura * Altura);
+    		
+    		formulario.imc.value = imc.toFixed(2)
+    		
+    		if(imc <= 18.5)
+    		{
+    			var x = ("<h1>Você está abaixo do peso!!</h1>")
+              document.getElementById("laranja").innerHTML = x
+    		} 
+    		else if(imc >18.5 && imc < 25)
+    		{        
+              var x = ("<h1>Você está com peso normal!!</h1>")
+              document.getElementById("normal").innerHTML = x
+    		}
+    		else if(imc >=25 && imc <= 30)
+    		{
+                var x = ("<h1>Você está acima do peso!!</h1>")
+              document.getElementById("laranja").innerHTML = x
+    		}
+    		else if(imc >30 && imc <= 35)
+    		{
+                var x = ("<h1>Obesidade I!</h1>")
+              document.getElementById("vermelho").innerHTML = x
+    			
+    		}
+    		else if(imc >35 && imc <= 40)
+    		{
+                var x = ("<h1>Obesidade II!</h1>")
+              document.getElementById("vermelho").innerHTML = x
+    		}
+    		else if(imc >40 && imc <= 50)
+    		{
+                var x = ("<h1>Obesidade III!</h1>")
+              document.getElementById("vermelho").innerHTML = x
+    		}
+    		else
+    		{
+    			alert('Godzilla,aberraçâo nuclear!!!!')
+               
+    		}
+    	}
+    </script>
+</head>
+<body>
+
+    <form id="formulario">
+        <fieldset>
+            <legend >Calculo IMC</legend>
+            
+            <label for="Peso"><strong>Peso:</label>
+            <input name="Peso" type="text" /><br>
+        
+            <label for="Altura">Altura:</label>
+            <input name="Altura" type="text" /><br>
+        
+            <label for="imc">imc:</label>
+            <input name="imc" type="text" disabled="disabled" />
+                
+            <a href="#" onclick="calcular();">Calcular</a>
+        </fieldset>
+        </form>
+        <span id="normal"></span>
+        <span id="laranja"></span>
+        <span id="vermelho" ></span>
+</html>
