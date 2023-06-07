@@ -1,0 +1,63 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: black;
+    color: #f2f2f2;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    position: relative;
+
+    
+    
+    
+}
+
+#main0 {
+ padding-top: 20px;
+    
+}
+    
+li{
+    list-style-type: none;
+}
+
+
+#main1 {
+    display: flex;
+    border: #f2f2f2 2px solid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 60px;
+    margin: 20px 500px;
+    
+    
+
+    
+}
+
+
+
+button{
+    background-color: black;
+    color: #f2f2f2;
+    border-radius: 9px;
+    border: 2px solid #f2f2f2;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+button:hover{
+background-color: darkslategray;
+
+
+}
